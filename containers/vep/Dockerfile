@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 LABEL author="Maxime Garcia" \
-description="VEP 89.7 image for use in CAW" \
+description="VEP 90.1 image for use in CAW" \
 maintainer="maxime.garcia@scilifelab.se"
 
 # Install libraries
@@ -19,11 +19,11 @@ perl \
 perl-base \
 unzip \
 && rm -rf /var/lib/apt/lists/* \
-&& cpanm DBI DBD::mysql
+&& cpanm DBI DBD::mysql Set::IntervalTree PerlIO::gzip
 
 # Setup ENV variables
 ENV PATH="$PATH:/ensembl-vep" \
-VEP_VERSION="release/89.7"
+VEP_VERSION="release/90.1"
 
 # Install VEP
 RUN git clone https://github.com/Ensembl/ensembl-vep.git ensembl-vep \

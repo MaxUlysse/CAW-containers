@@ -9,8 +9,8 @@ A container named after the process is made for each process. If a container can
 
 ## concatvcf [![concatvcf-docker status][concatvcf-docker-badge]][concatvcf-docker-link]
 
-- Based on `maxulysse/gatk:1.0`
-- Contain **[Picard][picard-link]** 2.0.1
+- Based on `debian:8.6`
+- Contain **[pigz][pigz-link]** 2.3.4
 
 ## fastqc [![fastqc-docker status][fastqc-docker-badge]][fastqc-docker-link]
 
@@ -24,7 +24,7 @@ A container named after the process is made for each process. If a container can
 
 ## gatk [![gatk-docker status][gatk-docker-badge]][gatk-docker-link]
 
-- Based on `openjdk:8`
+- Based on `openjdk:8-slim`
 - Contain **[GATK][gatk-link]** 3.7
 
 ## htslib [![htslib-docker status][htslib-docker-badge]][htslib-docker-link]
@@ -34,18 +34,18 @@ A container named after the process is made for each process. If a container can
 
 ## igvtools [![igvtools-docker status][igvtools-docker-badge]][igvtools-docker-link]
 
-- Based on `openjdk:8`
+- Based on `openjdk:8-slim`
 - Contain **[IGVTools][igvtools-link]** 2.3.91
 
 ## mapreads [![mapreads-docker status][mapreads-docker-badge]][mapreads-docker-link]
 
-- Based on `maxulysse/samtools:1.0`
+- Based on `maxulysse/samtools:1.1`
 - Contain **[BWA][bwa-link]** 0.7.8
 
 ## multiqc [![multiqc-docker status][multiqc-docker-badge]][multiqc-docker-link]
 
-- Based on `openjdk:8`
-- Contain **[MultiQC][multiqc-link]** 0.9
+- Based on `openjdk:8-slim`
+- Contain **[MultiQC][multiqc-link]** 1.0
 
 ## mutect1 [![mutect1-docker status][mutect1-docker-badge]][mutect1-docker-link]
 
@@ -54,7 +54,7 @@ A container named after the process is made for each process. If a container can
 
 ## picard [![picard-docker status][picard-docker-badge]][picard-docker-link]
 
-- Based on `openjdk:8`
+- Based on `openjdk:8-slim`
 - Contain **[Picard][picard-link]** 2.0.1
 
 ## qualimap [![qualimap-docker status][qualimap-docker-badge]][qualimap-docker-link]
@@ -64,12 +64,12 @@ A container named after the process is made for each process. If a container can
 
 ## runallelecount [![runallelecount-docker status][runallelecount-docker-badge]][runallelecount-docker-link]
 
-- Based on `maxulysse/samtools:1.0`
+- Based on `maxulysse/samtools:1.1`
 - Contain **[AlleleCount][allelecount-link]** 2.2.0
 
 ## runascat [![runascat-docker status][runascat-docker-badge]][runascat-docker-link]
 
-- Based on `maxulysse/samtools:1.0`
+- Based on `maxulysse/samtools:1.1`
 - Contain **[RColorBrewer][rcolorbrewer-link]**
 
 ## runconvertallelecounts [![runconvertallelecounts-docker status][runconvertallelecounts-docker-badge]][runconvertallelecounts-docker-link]
@@ -78,7 +78,7 @@ A container named after the process is made for each process. If a container can
 
 ## runmanta [![runmanta-docker status][runmanta-docker-badge]][runmanta-docker-link]
 
-- Based on `maxulysse/samtools:1.0`
+- Based on `maxulysse/samtools:1.1`
 - Contain **[Manta][manta-link]** 1.0.3
 
 ## samtools [![samtools-docker status][samtools-docker-badge]][samtools-docker-link]
@@ -88,7 +88,7 @@ A container named after the process is made for each process. If a container can
 
 ## snpeff [![snpeff-docker status][snpeff-docker-badge]][snpeff-docker-link]
 
-- Based on `openjdk:8`
+- Based on `openjdk:8-slim`
 - Contain **[snpEff][snpeff-link]** 4.3i
 
 ## snpeffgrch37 [![snpeffgrch37-docker status][snpeffgrch37-docker-badge]][snpeffgrch37-docker-link]
@@ -111,18 +111,18 @@ A container named after the process is made for each process. If a container can
 ## vep [![vep-docker status][vep-docker-badge]][vep-docker-link]
 
 - Based on `ubuntu:16.04`
-- Contain **[VEP][vep-link]** v89.7
+- Contain **[VEP][vep-link]** 90.1
 
 ## vepgrch37 [![vepgrch37-docker status][vepgrch37-docker-badge]][vepgrch37-docker-link]
 
 - Based on `maxulysse/vep`
-- Contain **[VEP][vep-link]** v89.7
+- Contain **[VEP][vep-link]** 90.1
 - Contain GRCh37
 
 ## vepgrch38 [![vepgrch38-docker status][vepgrch38-docker-badge]][vepgrch38-docker-link]
 
 - Based on `maxulysse/vep`
-- Contain **[VEP][vep-link]** v89.7
+- Contain **[VEP][vep-link]** 90.1
 - Contain GRCh38
 
 ---
@@ -168,6 +168,7 @@ A container named after the process is made for each process. If a container can
 [picard-docker-badge]: https://img.shields.io/docker/automated/maxulysse/picard.svg
 [picard-docker-link]: https://hub.docker.com/r/maxulysse/picard
 [picard-link]: https://github.com/broadinstitute/picard
+[pigz-link]: https://zlib.net/pigz/
 [qualimap-docker-badge]: https://img.shields.io/docker/automated/maxulysse/qualimap.svg
 [qualimap-docker-link]: https://hub.docker.com/r/maxulysse/qualimap
 [qualimap-link]: http://qualimap.bioinfo.cipf.es

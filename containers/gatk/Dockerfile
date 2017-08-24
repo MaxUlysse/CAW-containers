@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-slim
 
 LABEL author="Maxime Garcia" \
 description="GATK 3.7 image for use in CAW" \

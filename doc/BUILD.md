@@ -51,6 +51,15 @@ nextflow run . [--docker] [--singularity] [--singularityPublishDir <path>] [--pu
 nextflow run . --docker --singularity --push --containers multiqc,fastqc
 ```
 
+## For lazy users
+We provide scripts to build/push and or pull all containers
+```bash
+./scripts/build_all.sh
+./scripts/build_and_push_all.sh
+./scripts/pull_all.sh
+```
+
+
 ---
 [![](images/SciLifeLab_logo.png "SciLifeLab")][scilifelab-link]
 [![](images/NGI_logo.png "NGI")][ngi-link]

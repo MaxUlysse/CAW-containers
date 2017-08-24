@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:8-slim
 
 LABEL author="Maxime Garcia" \
 description="MultiQC 1.0 image for use in CAW" \
@@ -6,6 +6,8 @@ maintainer="maxime.garcia@scilifelab.se"
 
 # Install libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
+curl \
+git \
 gcc \
 python-dev \
 && curl -fsSL https://bootstrap.pypa.io/get-pip.py -o /opt/get-pip.py \

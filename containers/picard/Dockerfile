@@ -1,8 +1,13 @@
-FROM openjdk:8
+FROM openjdk:8-slim
 
 LABEL author="Maxime Garcia" \
 description="Picard 2.0.1 image for use in CAW" \
 maintainer="maxime.garcia@scilifelab.se"
+
+# Install libraries
+RUN apt-get update && apt-get install -y --no-install-recommends \
+curl \
+&& rm -rf /var/lib/apt/lists/*
 
 # Setup ENV variables
 ENV PICARD_BIN="picard-tools-2.0.1.zip" \

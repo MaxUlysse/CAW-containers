@@ -52,13 +52,12 @@ nextflow run . --docker --singularity --push --containers multiqc,fastqc
 ```
 
 ## For lazy users
-We provide scripts to build/push and or pull all containers
+We provide script to build/push or pull all containers
 ```bash
-./scripts/build_all.sh
-./scripts/build_and_push_all.sh
-./scripts/pull_all.sh
+./scripts/do_all.sh        # Build all docker containers
+./scripts/do_all.sh --push # Build and push all Docker containers into DockerHub
+./scripts/do_all.sh --pull # Pull all containers from DockerHub into Singularity
 ```
-
 
 ---
 [![](images/SciLifeLab_logo.png "SciLifeLab")][scilifelab-link]

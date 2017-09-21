@@ -1,27 +1,17 @@
-#!/bin/bash
+#!/bin/ash
 set -euo pipefail
 
-# Install libraries
-apt-get update
-apt-get install -y --no-install-recommends \
-    build-essential \
-    ca-certificates \
-    curl \
-    libbz2-dev \
-    liblzma-dev \
-    libncurses5-dev \
-    libncursesw5-dev \
-    zlib1g-dev
-rm -rf /var/lib/apt/lists/*
-
-# Setup ENV variables
-HTSLIB_BIN="htslib-1.4.tar.bz2"
-HTSLIB_VERSION="1.4"
-
-# Install HTSlib
-curl -fsSL https://github.com/samtools/htslib/releases/download/$HTSLIB_VERSION/$HTSLIB_BIN -o /opt/$HTSLIB_BIN
-tar xvjf /opt/$HTSLIB_BIN -C /opt/
-cd /opt/htslib-$HTSLIB_VERSION
+HTSLIB_VERSION=1.4
+apk --update add wget ca-certificates zlib-dev libbz2 bzip2-dev xz-dev xz-libs build-base
+mkdir /build
+cd /build
+wget --quiet -O htslib.tar.bz2 https://github.com/samtools/htslib/releases/download/$HTSLIB_VERSION/htslib-${HTSLIB_VERSION}.tar.bz2
+tar xf htslib.tar.bz2
+cd htslib-$HTSLIB_VERSION
 make
-make install
-rm -rf /opt/$HTSLIB_BIN /opt/htslib-$HTSLIB_VERSION
+make install prefix=/usr
+
+apk del wget ca-certificates zlib-dev bzip2-dev xz-dev build-base
+rm -rf /var/cache/apk/*
+cd /
+rm -rf /build

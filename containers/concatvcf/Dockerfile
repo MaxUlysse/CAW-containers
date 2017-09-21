@@ -6,7 +6,7 @@ maintainer="maxime.garcia@scilifelab.se"
 
 # Install libraries
 RUN apt-get update && apt-get install -y --no-install-recommends \
-pigz \
+tabix \
 && rm -rf /var/lib/apt/lists/*
 
 # Create UPPMAX directories
